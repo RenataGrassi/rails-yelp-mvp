@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h1>Cadastrar Novo Restaurante</h1>
+
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, label: "Nome do Restaurante" %>
+    <%= f.input :address, label: "Endereço" %>
+    <%= f.input :phone_number, label: "Telefone" %>
+    <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"], label: "Categoria" %>
+
+    <%= f.button :submit, "Criar Restaurante", class: "btn btn-success mt-3" %>
+    <%= link_to "Cancelar", restaurants_path, class: "btn btn-secondary mt-3 ms-2" %>
+  <% end %>
+</div>
